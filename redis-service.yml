@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-service
+  labels:
+    author: felix
+    name: redis-service
+spec:
+  ports:
+    - port: 6370
+      targetPort: 6379
+  selector:
+    author: felix
+    name: redis-pod
+...
